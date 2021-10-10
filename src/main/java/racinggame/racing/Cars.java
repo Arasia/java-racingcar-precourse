@@ -1,6 +1,5 @@
 package racinggame.racing;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
@@ -29,27 +28,12 @@ public class Cars {
     }
 
     public String getFastestCarsName() {
-        List<String> fastestCarNameList = new ArrayList<>();
-        int maxPosition = Integer.MIN_VALUE;
+        FastestCars fastestCars = new FastestCars();
 
         for (Car car : carList) {
-            maxPosition = fastestCarCheck(car, maxPosition, fastestCarNameList);
+            fastestCars.fastestCarCheck(car);
         }
 
-        return String.join(",", fastestCarNameList);
-    }
-
-    private int fastestCarCheck(Car car, Integer maxPosition, List<String> fastestCarNameList) {
-        if (maxPosition < car.getPosition()) {
-            fastestCarNameList.clear();
-            fastestCarNameList.add(car.getName());
-            return car.getPosition();
-        }
-
-        if (maxPosition == car.getPosition()) {
-            fastestCarNameList.add(car.getName());
-        }
-
-        return maxPosition;
+        return fastestCars.getFastestCarsName();
     }
 }
