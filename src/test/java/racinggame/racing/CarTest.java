@@ -47,7 +47,7 @@ class CarTest {
                 .isZero();
 
         assertThat(car.getPositionString())
-                .isEqualTo("Tom :");
+                .isEqualTo("Tom : ");
     }
 
     @Test

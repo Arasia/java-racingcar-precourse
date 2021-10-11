@@ -24,7 +24,7 @@ public class Cars {
                     .append("\n");
         }
 
-        return sb.toString().trim();
+        return sb.toString();
     }
 
     public String getFastestCarsName() {

@@ -30,7 +30,7 @@ class CarsTest {
         }
 
         assertThat(cars.getPositionStringAllCar())
-                .isEqualTo("Tom : --\nSam : --");
+                .isEqualTo("Tom : --\nSam : --\n");
     }
 
     @Test

@@ -50,6 +50,6 @@ public class Car {
             sb.append("-");
         }
 
-        return sb.toString().trim();
+        return sb.toString();
     }
 }
